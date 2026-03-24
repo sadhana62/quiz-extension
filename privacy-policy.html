@@ -83,37 +83,38 @@
         </p>
 
         <p>
-          Google Forms Study Helper is a browser extension that adds an "Explain with AI"
-          button to multiple-choice questions on Google Forms. This page explains what data
-          the extension handles and how that data is used.
+          Google Forms Study Helper is a web app that lets a user submit a public Google Form
+          URL and a Gemini API key to receive study-oriented explanations for multiple-choice
+          questions. This page explains what data the app handles and how that data is used.
         </p>
 
         <h2>What information the extension handles</h2>
         <ul>
-          <li>Your Gemini API key, which you enter in the extension settings.</li>
-          <li>Question text and answer options from the Google Forms page when you click "Explain with AI".</li>
-          <li>Basic extension settings stored in browser storage.</li>
+          <li>Your Gemini API key, which you enter into the web app form.</li>
+          <li>The Google Form URL you submit.</li>
+          <li>Question text and answer options extracted from the public Google Form.</li>
         </ul>
 
         <h2>How the information is used</h2>
         <ul>
           <li>Your Gemini API key is used only to authenticate requests to the Gemini API.</li>
-          <li>Question text and answer options are sent to the Gemini API only after you click the explanation button.</li>
+          <li>The submitted Google Form URL is fetched to read the public question content.</li>
+          <li>Question text and answer options are sent to the Gemini API to generate study-oriented analysis.</li>
           <li>The AI response is displayed inside the page to help you study the question.</li>
         </ul>
 
         <h2>Where data is stored</h2>
         <p>
-          The extension stores your Gemini API key in Chrome or Edge sync storage using the
-          browser extension storage API. The extension does not operate its own backend server
-          and does not store your data on a developer-controlled database.
+          The app does not intentionally store your Gemini API key in a developer-controlled
+          database. Requests are processed through the hosted app and Google Gemini API in order
+          to fetch the form and return the analysis.
         </p>
 
         <h2>Who data is shared with</h2>
         <p>
-          When you request an explanation, the selected question content and your API key are
-          transmitted directly to Google's Gemini API endpoint. No other third-party services are
-          used by this extension based on the current codebase.
+          When you request an analysis, the submitted form URL is fetched by the hosted app and
+          the extracted question content plus your API key are sent to Google's Gemini API endpoint.
+          No other third-party services are used by this app based on the current codebase.
         </p>
 
         <h2>What the extension does not do</h2>
@@ -121,14 +122,14 @@
           <li>It does not collect account registration details.</li>
           <li>It does not sell personal information.</li>
           <li>It does not run analytics, advertising, or remote tracking scripts.</li>
-          <li>It does not send form content anywhere unless you actively request an explanation.</li>
+          <li>It does not process Google Form content unless you actively submit a form URL.</li>
         </ul>
 
         <h2>Data retention and control</h2>
         <p>
-          You can remove the stored API key at any time by clearing the extension settings or
-          uninstalling the extension. Data sent to the Gemini API is subject to Google's terms
-          and policies for that service.
+          You can stop sharing data with the app at any time by closing the page and not submitting
+          additional requests. Data sent to the Gemini API is subject to Google's terms and
+          policies for that service.
         </p>
 
         <h2>Contact</h2>
